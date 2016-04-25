@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Şablon</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ <link href="css/bootstrap.css" rel="stylesheet">
+ <link href="css/mycss.css" rel="stylesheet">
+ <style>
+ 
+	
+	
+
+		
+       
+		
+		
+		#medya{padding:15px;clear:both;}
+		
+		
+	
+	
+		
+		
+		
+  	
+		
+		
+		.col-sm-7 h5:hover{color:#3498DB;cursor:pointer;}
+		
+		
+	
+		#modal-footer-div{margin:0 auto;width:175px;overflow:hidden;}
+    	#modal-footer-list{list-style:none;padding:0;margin:0;position: relative;
+  left:0px;}
+		#modal-footer-list li{float:left;margin:0 5px;opacity:0.5}
+		#modal-footer-list li.aktif{border:2px solid #900;opacity:1}
+		#modal-geri{position: absolute;  top: 50%;color: #e9e9e9;cursor:pointer;}
+		#modal-ileri{position: absolute;  top: 50%;  right: 15px;  color: #e9e9e9;cursor:pointer;}
+		#modal-geri:hover,#modal-ileri:hover{color:#900;}
+		#modal-durdur{position: absolute;  top: -25px;cursor:pointer;}
+		#modal-calistir{position: absolute;  top: -25px;  display: none;cursor:pointer;}
+		#modal-durdur:hover i,#modal-calistir:hover i{color:#900;}
+		#liste_ileri{  position: absolute;  right: 100px; cursor:pointer;}
+		#liste_geri{  position: absolute;  left: 100px;cursor:pointer;}
+  @media (min-width:992px) and (max-width:1199px)
+		{  .well {width:290px;}
+ 
+		}
+ 
+ 
+ @media  (min-width:768px) and (max-width:991px)
+		{  .well {width:250px;}
+           #video_icerik  .col-sm-4{margin-right:30px;}       
+		  #menu ul li a {font-size:12px;} 
+		  #arama{font-size:12px;}
+		  #sosyal{font-size:12px;}
+		}
+	@media (min-width:620px) and (max-width:767px)
+	{
+		
+			
+			#arama .form-group{width:100%;}
+			#arama_buton{ top: -49px;float: right;
+              right: 1px;}
+			 #sosyal{text-align:center;} 
+			 .well{width:420px;margin-left:-77px;}
+			 .img-thumbnail{height:350px;}
+			 #menu ul li a {font-size:13px;}
+		      .row{width:425px;margin-left:-70px;}
+	} 
+	
+  	@media (min-width:487px) and (max-width:619px)
+ {
+	#arama .form-group{width:100%;}
+			#arama_buton{ top: -49px;float: right;
+              right: 1px;}
+			 #sosyal{text-align:center;}
+			 .well{width:350px;}
+			 .img-thumbnail{height:350px;}
+			 #menu ul li a {font-size:13px;}
+		      .row{width:378px;margin-left:-70px;}
+ }
+ @media  (min-width:435px) and (max-width:486px)
+ {
+	#arama .form-group{width:100%;}
+			#arama_buton{ top: -49px;float: right;
+              right: 1px;}
+			 #sosyal{text-align:center;}
+			 .well{width:300px;}
+			 .img-thumbnail{height:350px;}
+			 #menu ul li a {font-size:13px;}
+		      .row{width:378px;margin-left:-70px;}
+ }
+  @media  (min-width:357px) and  (max-width:434px)
+  {
+	  #arama .form-group{width:100%;}
+			#arama_buton{ top: -49px;float: right;
+              right: 1px;}
+			 #sosyal{text-align:center;}
+			 .well{width:200px;}
+			 .img-thumbnail{height:350px;}
+			 #menu ul li a {font-size:11px;}
+		      .row{width:230px;margin-left:-70px;}
+  }
+   @media  (max-width:356px){
+	   #arama .form-group{width:100%;}
+			#arama_buton{ top: -49px;float: right;
+              right: 1px;}
+			 #sosyal{text-align:center;}
+			 .well{width:200px;}
+			 .img-thumbnail{height:350px;}
+			 #menu ul li a {font-size:9px;}
+		      .row{width:230px;margin-left:-70px;}
+   }
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </style>
+</head>
+
+<body>
+    
+    <div class="container" id="cerceve">
+    <div id="menu1">
+      <div class="col-sm-6" id="menu">
+         <ul>
+              <li><a href="index_yeni.html"> ANASAYFA</a></li>
+                <li><a href="hakkımda_yeni.html"> HAKKIMDA</a></li>
+                  <li><a href="interrail_yeni.html"> İNTERRAİL</a></li>
+                    <li> <a href="medya_yeni.html"> MEDYA</a></li>
+                      <li><a href="iletisim_yeni.html"> İLETİŞİM</a></li>
+                      </ul>
+      
+      
+      
+      </div>
+      <div class="col-sm-4" id="arama">
+     <form class="form-inline" method="post" action="#">
+                  <div class="form-group">
+                    <input type="text" id="arama_input" class="form-control" id="ara" placeholder="Ara...">
+                  </div>
+                  <button type="submit" class="btn btn-default" id="arama_buton" ><i class="fa fa-search"></i></button>
+                </form>
+      
+      </div>
+      <div class="col-sm-2" id="sosyal">
+        <span class="fa-stack fa-lg">
+                  <i class="fa fa-square-o fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x"></i>
+                </span>
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-square-o fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-square-o fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x"></i>
+                </span>
+              
+      
+      
+      
+      </div>
+         <div id="medya">
+        <div class="baslik"><span>SEYAHETLERİM</span></div>
+                <div style="margin-left:0;margin-right:0;padding-bottom: 20px;" class="row">  
+      			<div id="resimler" style="clear:both;padding-top:20px">
+                    	
+                        
+                        
+                         <div class="col-sm-3" style="position:relative;">
+                        	<img class="img-thumbnail" src="img/img1.jpg">
+                            <div class="perde" data-toggle="modal" data-target="#myModal">
+                            	<i class="fa fa-search"></i>	
+                            </div>
+                        </div>
+                        <div class="col-sm-3" style="position:relative;">
+                        	<img class="img-thumbnail" src="img/img2.jpg">
+                            <div class="perde"  data-toggle="modal" data-target="#myModal">
+                            	<i class="fa fa-search"></i>	
+                            </div>
+                        </div>
+                    	 <div class="col-sm-3" style="position:relative;">
+                        	<img class="img-thumbnail" src="img/img3.jpg">
+                            <div class="perde"  data-toggle="modal" data-target="#myModal">
+                            	<i class="fa fa-search"></i>	
+                            </div>
+                        </div>
+                    	 <div class="col-sm-3" style="position:relative;">
+                        	<img class="img-thumbnail" src="img/img4.jpg">
+                            <div class="perde"  data-toggle="modal" data-target="#myModal">
+                            	<i class="fa fa-search"></i>	
+                            </div>
+                        </div>
+                        <div class="col-sm-3" style="position:relative;">
+                        	<img class="img-thumbnail" src="img/img5.jpg">
+                            <div class="perde"  data-toggle="modal" data-target="#myModal">
+                            	<i class="fa fa-search"></i>	
+                            </div>
+                        </div>
+                        <div class="col-sm-3" style="position:relative;">
+                        	<img class="img-thumbnail" src="img/img6.jpg">
+                            <div class="perde"  data-toggle="modal" data-target="#myModal">
+                            	<i class="fa fa-search"></i>	
+                            </div>
+                        </div>
+                        <div class="col-sm-3" style="position:relative;">
+                        	<img class="img-thumbnail" src="img/img7.jpg">
+                            <div class="perde"  data-toggle="modal" data-target="#myModal">
+                            	<i class="fa fa-search"></i>	
+                            </div>
+                        </div>
+						<div class="col-sm-3" style="position:relative;">
+                        	<img class="img-thumbnail" src="img/img8.jpg">
+                            <div class="perde"  data-toggle="modal" data-target="#myModal">
+                            	<i class="fa fa-search"></i>	
+                            </div>
+                        </div>
+                   
+        	</div>
+      </div>
+    
+      <div class="baslik"><span>VİDEOLAR</span></div>
+       <div id="resimler" style="padding-top:10px;">
+                    <div  style="margin:5px 0px;">
+                            	<iframe width="300" height="200"  frameborder="0" allowfullscreen></iframe>
+                               <iframe width="300" height="200"  frameborder="0" allowfullscreen></iframe>
+                                <iframe width="300" height="200"  frameborder="0" allowfullscreen></iframe>
+                            
+                           
+                            	<iframe width="300" height="200"  frameborder="0" allowfullscreen></iframe>
+                                <iframe width="300" height="200"  frameborder="0" allowfullscreen></iframe>
+                                <iframe width="300" height="200"  frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            
+                        </div>
+             
+               
+ 
+   
+     
+                        
+             </div>            
+           
+     
+    
+       
+      
+  
+                      
+                	
+                        
+              <div class="col-xs-12"  style="margin:0px;padding:25px 0;background-color:#2e2e2e;color:#fff;text-align:center;">
+            Copyright © 2015  Tüm Hakları Saklıdır<br>
+Designed by Nilay Akyol
+                 
+                 	
+                       
+               </div>                 
+                       
+                   
+                  
+                   
+                           
+                            
+                     
+                   
+                   
+                 
+                        
+            
+                  
+              
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" style="padding-bottom:10px;"></h4>
+      </div>
+      <div class="modal-body text-center" >
+        <img class="img-responsive no-opacity" src="" style="margin:0 auto;">
+        <div id="modal-geri"><i style="font-size:40px;" class="fa fa-arrow-circle-o-left"></i></div>
+        <div id="modal-ileri"><i style="font-size:40px;" class="fa fa-arrow-circle-o-right"></i></div>
+        <div id="modal-durdur"><i style="font-size:20px;" class="fa fa-pause"></i></div>
+        <div id="modal-calistir"><i style="font-size:20px;" class="fa fa-play"></i></div>
+      </div>
+      <div class="modal-footer">
+      	<div id="modal-footer-div">
+            <ul id="modal-footer-list">
+               
+            </ul>
+            <div id="liste_geri"><i style="font-size:20px;" class="fa fa-arrow-circle-o-left"></i></div>
+            <div id="liste_ileri"><i style="font-size:20px;" class="fa fa-arrow-circle-o-right"></i></div>
+        </div>
+        
+        
+        <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/myjs.js"></script>
+    <script>
+	
+		$("#resimler .perde").click(function(){
+				var liste='';
+				var a=$(this).parent().find("img").attr("src");
+				var sayac=0;
+				$("#resimler img").each(function() {
+                    var b=$(this).attr("src");
+					liste+='<li ';
+					if(a==b){liste+=' class="aktif" '; }
+					liste+='><img src="'+b+'" style="width:25px;height:auto;" onclick="modal_degistir('+sayac+')"></li>';
+					sayac++;
+                });
+				$("#modal-footer-list").html(liste);
+				var genislik=($("#modal-footer-list li").size())*36;
+				$("#modal-footer-list").css("width",genislik+"px");
+				
+		});
+		
+    	
+		
+		$("#modal-ileri").click(function(){
+			var sayi=$("#modal-footer-list li").size();
+			var a=$("#modal-footer-list li.aktif").index();
+			a++;
+			if(a==sayi){a=0;}
+			var b=$("#modal-footer-list li").eq(a).find("img").attr("src");
+			$("#modal-footer-list li").removeClass("aktif");
+			$("#modal-footer-list li").eq(a).addClass("aktif");
+			$(".modal-body img").attr("src",b);
+			
+		});
+		$("#modal-geri").click(function(){
+			var sayi=$("#modal-footer-list li").size();
+			var a=$("#modal-footer-list li.aktif").index();
+			a--;
+			if(a<0){a=(sayi-1);}
+			var b=$("#modal-footer-list li").eq(a).find("img").attr("src");
+			$("#modal-footer-list li").removeClass("aktif");
+			$("#modal-footer-list li").eq(a).addClass("aktif");
+			$(".modal-body img").attr("src",b);
+			
+		});
+		
+		//var calistir=setInterval(function(){ $("#modal-ileri").click();  },2000);
+		
+	/*	$(".modal-body img").hover(function(){ clearInterval(calistir);},
+			function(){calistir=setInterval(function(){ $("#modal-ileri").click();  },2000);});*/
+			
+		$("#modal-durdur").click(function(){
+			clearInterval(calistir);
+			$(this).hide();
+			$("#modal-calistir").show();
+		});	
+		
+		$("#modal-calistir").click(function(){
+			calistir=setInterval(function(){ $("#modal-ileri").click();  },2000);
+			$(this).hide();
+			$("#modal-durdur").show();
+		});
+		
+		$("#liste_geri").click(function(){
+			var genislik=($("#modal-footer-list li").size())*35;
+			var a=parseInt($("#modal-footer-list").css("left"));
+			a-=35;
+			if( (genislik-175)+a>=0){
+			$("#modal-footer-list").css("left",a); }
+		});
+		
+		$("#liste_ileri").click(function(){
+			var genislik=($("#modal-footer-list li").size())*35;
+			var a=parseInt($("#modal-footer-list").css("left"));
+
+			if(a!=0){
+			a+=35;
+			$("#modal-footer-list").css("left",a); }
+		});
+		
+		function modal_degistir(a){
+
+			var b=$("#modal-footer-list li").eq(a).find("img").attr("src");
+			$("#modal-footer-list li").removeClass("aktif");
+			$("#modal-footer-list li").eq(a).addClass("aktif");
+			$(".modal-body img").attr("src",b);
+
+		}
+		
+    </script>
+    
+        
+        
+       
+             
+       
+
+
+
+
+
+
+
+
+
+</body>
+</html>
